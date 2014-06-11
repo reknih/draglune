@@ -14,7 +14,8 @@
     <h1>draglune demo</h1>
 
     <!-- begin demo markup -->
-
+    <div id="dropbox" style="width: 100px; height: 100px; background: #080;"></div>
+    <div id="filebox" style="width: 100px; height: 100px; background: #402; float: left;"></div>
     <!-- end demo markup -->
 
     <p>See the <a href="http://reknih.github.io/draglune">project homepage</a>.
@@ -26,9 +27,13 @@
     <script>
       /* begin demo script */
 
-      var n = draglune();
-      console.log(n);
-
+      draglune.makeFileDrop(document.getElementById("dropbox"), function (files) {
+        alert("drop");
+      });
+      draglune.readFromDrop(document.getElementById("filebox"), function (texts) {
+        alert(texts[0]);
+      });
+      
       /* end demo script */
     </script>
   </body>

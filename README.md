@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/reknih/draglune.svg?branch=master)](https://travis-ci.org/reknih/draglune)
+
 # draglune
 
 It makes drag and drop easier
